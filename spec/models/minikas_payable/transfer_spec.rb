@@ -114,7 +114,7 @@ RSpec.describe MinikasPayable::Transfer, type: :model do
     payer.transfer
 
     transfer = MinikasPayable::Transfer.last
-    expect(transfer).to have_attributes(payer.slice(:recipient_name, :recipient_postal_code, :recipient_postal_city))
+    expect(transfer).to have_attributes(payer.slice(:bank_account, :recipient_name, :recipient_postal_code, :recipient_postal_city))
   end
 
   it "infers message from payer" do

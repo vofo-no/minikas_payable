@@ -61,7 +61,7 @@ module MinikasPayable
 
       def transfer(amount = nil)
         amount ||= unpaid
-        write_transfer(amount) if amount.nonzero?
+        write_transfer(amount: amount) if amount.nonzero?
       end
 
       private
@@ -89,7 +89,6 @@ module MinikasPayable
             new_transfer.destroy
           else
             new_transfer.message = transfer_message
-            new_transfer.attributes_from_payable(:bank_account, :recipient_name, :recipient_postal_code, :recipient_postal_city)
             new_transfer.save!
           end
         end

@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_19_090000) do
+ActiveRecord::Schema.define(version: 2019_04_02_073553) do
+
+  create_table "dummy_payers", force: :cascade do |t|
+    t.integer "amount"
+    t.string "message"
+    t.string "bank_account"
+    t.string "recipient_name"
+    t.string "recipient_postal_code"
+    t.string "recipient_postal_city"
+    t.integer "learning_association_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "minikas_payable_batches", force: :cascade do |t|
     t.string "owner_type"

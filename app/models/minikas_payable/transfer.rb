@@ -1,7 +1,7 @@
 module MinikasPayable
   class Transfer < MinikasPayable::ApplicationRecord
     belongs_to :payable, polymorphic: true
-    belongs_to :batch, class_name: MinikasPayable::Batch.name, foreign_key: :minikas_payable_batch_id
+    belongs_to :batch, class_name: MinikasPayable::Batch.name, foreign_key: "minikas_payable_batch_id"
 
     validate :nonzero_amount
 

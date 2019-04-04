@@ -3,5 +3,6 @@ FactoryBot.define do
     number { 1 }
     closed { false }
     date { "2019-03-12" }
+    association :owner, factory: :dummy_payer
   end
 end

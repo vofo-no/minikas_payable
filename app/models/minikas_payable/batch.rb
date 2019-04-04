@@ -3,7 +3,7 @@ module MinikasPayable
     TRANSFERS_CLASS = MinikasPayable::Transfer
     scope :with_transfers, -> { select(["#{self.table_name}.*", "SUM(#{TRANSFERS_CLASS.table_name}.amount) as amount", "COUNT(#{TRANSFERS_CLASS.table_name}.id) as lines"]).joins(:transfers).group("#{self.table_name}.id") }
 
-    has_many :transfers, class_name: TRANSFERS_CLASS.name
+    has_many :transfers, class_name: TRANSFERS_CLASS.name, dependent: :restrict_with_error, foreign_key: "minikas_payable_batch_id"
     belongs_to :owner, polymorphic: true
 
     validates :number, uniqueness: { scope: [:owner_type, :owner_id] }, allow_nil: true

@@ -1,0 +1,7 @@
+<% content_for(:title, @batch.to_s) %>
+
+<div class="card">
+  <div class="list-group list-group-flush">
+    <%= render(@batch.grant_transfers) || render("no_records", model_name: MinikasPayable::Transfer.model_name) %>
+  </div>
+</div>

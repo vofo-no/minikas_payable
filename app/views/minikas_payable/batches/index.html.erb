@@ -1,0 +1,7 @@
+<% content_for(:title, MinikasPayable::Batch.model_name.human(count: 2)) %>
+
+<div class="card">
+  <div class="list-group list-group-flush">
+    <%= render(@batches, list_item: true) || render("no_records", model_name: MinikasPayable::Batch.model_name) %>
+  </div>
+</div>

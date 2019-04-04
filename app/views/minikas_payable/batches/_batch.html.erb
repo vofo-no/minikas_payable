@@ -1,0 +1,18 @@
+<% if local_assigns[:list_item] %>
+  <%= link_to batch, class: "list-group-item list-group-item-action" do %>
+    <div class="row">
+      <div class="col-6">
+        <strong class="text-truncate">
+          <%= octicon batch.closed ? "locked" : "clippy" %>
+          <%= batch.to_s %>
+        </strong>
+      </div>
+      <div class="col-3">
+        <%= octicon "database" %> <%= batch.lines %>
+      </div>
+      <div class="col-3 text-right">
+        <%= number_to_currency batch.amount %>
+      </div>
+    </div>
+  <% end %>
+<% end %>

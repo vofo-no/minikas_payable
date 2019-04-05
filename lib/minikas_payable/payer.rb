@@ -59,9 +59,12 @@ module MinikasPayable
         send(payable_options[:amount]).to_i - paid
       end
 
-      def transfer(amount = nil)
-        amount ||= unpaid
+      def transfer_amount(amount)
         write_transfer(amount: amount) if amount.nonzero?
+      end
+
+      def transfer
+        transfer_amount(unpaid)
       end
 
       private

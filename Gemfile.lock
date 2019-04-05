@@ -3,6 +3,7 @@ PATH
   specs:
     minikas_payable (0.1.2)
       octicons_helper
+      pundit (~> 2.0)
       rails (~> 5.2.2, >= 5.2.2.1)
 
 GEM
@@ -84,6 +85,8 @@ GEM
     octicons_helper (8.5.0)
       octicons (= 8.5.0)
       rails
+    pundit (2.0.1)
+      activesupport (>= 3.0.0)
     rack (2.0.7)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)

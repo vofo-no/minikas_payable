@@ -25,12 +25,7 @@ module MinikasPayable
     private
 
       def find_batches
-        if respond_to? :policy_scope
-          policy_scope(MinikasPayable::Batch)
-        else
-          logger.warn "Did not find a policy_scope method. No batches will be returned."
-          MinikasPayable::Batch.none
-        end
+        policy_scope(MinikasPayable::Batch)
       end
 
       def find_batch

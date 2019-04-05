@@ -12,12 +12,7 @@ module MinikasPayable
     private
 
       def find_transfers
-        if respond_to? :policy_scope
-          policy_scope(MinikasPayable::Transfer).joins(:batch).merge(policy_scope(MinikasPayable::Batch).where(closed: false))
-        else
-          logger.warn "Did not find a policy_scope method. No transfers will be returned."
-          MinikasPayable::Transfer.none
-        end
+        policy_scope(MinikasPayable::Transfer).joins(:batch).merge(policy_scope(MinikasPayable::Batch).where(closed: false))
       end
 
       def transfer

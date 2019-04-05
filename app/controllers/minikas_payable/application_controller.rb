@@ -1,6 +1,8 @@
+require 'pundit'
+
 module MinikasPayable
   class ApplicationController < ActionController::Base
-    include Pundit if Object.const_defined?(:Pundit)
+    include Pundit
 
     protect_from_forgery with: :exception
   end

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2 (April 4, 2019)
+
+* Fixed: Missing include Pundit in controller.
+
 ## 0.1.1 (April 4, 2019)
 
 * New: ```payer#transfer_amount(amount)``` for explicit transfers (override unpaid).

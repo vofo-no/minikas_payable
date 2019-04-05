@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    minikas_payable (0.1.0)
+    minikas_payable (0.1.2)
       octicons_helper
       rails (~> 5.2.2, >= 5.2.2.1)
 

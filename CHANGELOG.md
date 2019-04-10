@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.4 (April 10, 2019)
+
+* Controllers inherit from parent controller
+
 ## 0.1.3 (April 4, 2019)
 
 * Add Pundit dependency.

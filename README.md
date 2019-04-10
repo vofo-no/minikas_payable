@@ -1,6 +1,8 @@
 # MinikasPayable
 Short description and motivation.
 
+[![Build Status](https://travis-ci.org/vofo-no/minikas_payable.svg?branch=master)](https://travis-ci.org/vofo-no/minikas_payable)
+
 ## Usage
 How to use my plugin.
 

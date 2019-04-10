@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.5 (April 10, 2019)
+
+* Add config block
+
 ## 0.1.4 (April 10, 2019)
 
 * Controllers inherit from parent controller
